@@ -1,5 +1,7 @@
+// importo img svg carrito
 import cart from "./img/cart.svg"
 
+// creo componente carrito
 const CartWidget = () => {
     return(
         <div>
@@ -8,4 +10,5 @@ const CartWidget = () => {
         </div>
     )
 }
+// exporto img de carrito (componente)
 export default CartWidget;

@@ -1,17 +1,24 @@
-import CartWidget from "../CartWidget/CartWidget";
+//Importo componente carrito 
+import { Link } from "react-router-dom"
+import CartWidget from "../CartWidget/CartWidget"
 
+
+//Creo la barra de navegación  
 const NavBar = () => {
     return (
-        <nav>
-            <h3>Ecommerce</h3>
+        <nav className = "Nav">
+            <Link to={"/"}>
+                <h3>Lupita Store</h3>
+            </Link>
             <div>
-                <button>Celulares</button>
-                <button>Tablets</button>
-                <button>Notebooks</button>
-             </div>
-             <CartWidget />
+                <Link to={"/category/abrigos"} className="button is-danger is-light">Abrigos</Link>
+                <Link to={"/category/chalecos"} className="button is-danger is-light">Chalecos</Link>
+                <Link to={"/category/pantalones"} className="button is-danger is-light">Pantalones</Link>
+            </div>
+            <CartWidget/>
         </nav>
+
     )
 }
-
-export default NavBar;
+//Exporto el componente
+export default NavBar
